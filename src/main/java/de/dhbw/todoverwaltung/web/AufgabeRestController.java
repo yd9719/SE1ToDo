@@ -52,8 +52,8 @@ public class AufgabeRestController {
     @ResponseStatus(HttpStatus.CREATED)
     public AufgabeDto erzeugeAufgabe(@RequestBody AufgabeEingabeDto eingabe) {
         pruefeEingabe(eingabe);
-        AufgabeEntity neueAufgabe = new AufgabeEntity(textOderNull(eingabe.beschreibung()),
-                eingabe.name().trim(),
+        AufgabeEntity neueAufgabe = new AufgabeEntity(eingabe.name().trim(),
+                textOderNull(eingabe.beschreibung()),
                 textOderNull(eingabe.kategorie()),
                 LocalDate.now());
         return DtoMapper.zuDto(aufgabeRepository.save(neueAufgabe));
