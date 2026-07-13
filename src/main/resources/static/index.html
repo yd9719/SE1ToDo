@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo-Verwaltung</title>
+    <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+    <h1>ToDo-Verwaltung</h1>
+    <p class="hinweis">Aufgaben anlegen, bearbeiten und löschen. Über den Link in der Spalte
+        "Unteraufgaben" gelangt man zur Detailseite mit den Unteraufgaben einer Aufgabe.</p>
+
+    <div id="meldung" class="meldung"></div>
+
+    <h2 id="formularUeberschrift">Neue Aufgabe anlegen</h2>
+    <form id="aufgabenFormular">
+        <input type="hidden" id="bearbeiteId" value="">
+        <label for="eingabeName">Name *</label>
+        <input type="text" id="eingabeName" maxlength="255" size="60" required>
+        <label for="eingabeKategorie">Kategorie</label>
+        <input type="text" id="eingabeKategorie" maxlength="255" size="30">
+        <label for="eingabeBeschreibung">Beschreibung</label>
+        <textarea id="eingabeBeschreibung" rows="3" maxlength="2000"></textarea>
+        <br>
+        <button type="submit" id="speichernKnopf">Anlegen</button>
+        <button type="button" id="abbrechenKnopf" hidden>Abbrechen</button>
+    </form>
+
+    <h2>Alle Aufgaben</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Kategorie</th>
+                <th>Beschreibung</th>
+                <th>Erstellt am</th>
+                <th>Unteraufgaben</th>
+                <th>Aktionen</th>
+            </tr>
+        </thead>
+        <tbody id="aufgabenTabelle"></tbody>
+    </table>
+    <p id="leererHinweis" class="hinweis" hidden>Es sind noch keine Aufgaben vorhanden.</p>
+
+    <script src="js/gemeinsam.js"></script>
+    <script src="js/aufgaben.js"></script>
+</body>
+</html>
