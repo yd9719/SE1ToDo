@@ -1,0 +1,93 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background-color: #ffffff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px;
+    line-height: 1.5;
+}
+
+h1, h2 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+a {
+    color: #1a0dab;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 8px;
+}
+
+th, td {
+    border: 1px solid #999999;
+    padding: 6px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #eeeeee;
+}
+
+form {
+    border: 1px solid #999999;
+    padding: 12px;
+    margin-top: 8px;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    margin-top: 4px;
+    padding: 4px;
+    font-size: 1em;
+    max-width: 100%;
+}
+
+textarea {
+    width: 95%;
+}
+
+button {
+    margin-top: 12px;
+    margin-right: 8px;
+    padding: 6px 14px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.meldung {
+    display: none;
+    padding: 8px 12px;
+    margin-top: 12px;
+    border: 1px solid;
+}
+
+.meldung.fehler {
+    display: block;
+    color: #a30000;
+    background-color: #ffe0e0;
+    border-color: #a30000;
+}
+
+.meldung.erfolg {
+    display: block;
+    color: #005500;
+    background-color: #e0ffe0;
+    border-color: #005500;
+}
+
+.hinweis {
+    color: #555555;
+    font-size: 0.9em;
+}
